@@ -38,7 +38,9 @@ namespace Radegast
             : base(instance)
         {
             InitializeComponent();
-            txtTitle.Text = Properties.Resources.RadegastTitle + "." + RadegastBuild.CurrentRev;
+            txtTitle.Text = Properties.Resources.RadegastTitle + " " + RadegastBuild.VersionString;
+
+            Radegast.GUI.GuiHelpers.ApplyGuiFixes(this);
         }
 
         private void lblHomepage_Click(object sender, System.EventArgs e)
